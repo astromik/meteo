@@ -1,0 +1,22 @@
+"1127583855"    //  0x4335906F  [0]  graf tlaku 12 hodin
+"1127581815"    //  0x43358877  [1]  graf tlaku 6 dni
+"1127587935"    //  0x4335A05F  [2]  graf venkovni teploty 12 hodin
+"1127610375"    //  0x4335F807  [3]  graf venkovni teploty 6 dni
+"1127600175"    //  0x4335D02F  [4]  graf vnitrni teploty 12 hodin
+"1127592015"    //  0x4335B04F  [5]  graf vnitrni teploty 6 dni
+"1127585895"    //  0x43359867  [6]  graf vlhkosti 12 hodin
+"1127602215"    //  0x4335D827  [7]  graf vlhkosti 6 dni
+"1127586915"    //  0x43359C63  [8]  zhasinani rekordovych LED
+"1127603235"    //  0x4335DC23  [9]  displej ON / OFF
+"1127611395"    //  0x4335FC03  [10]  funkce Lampicka
+"1127595075"    //  0x4335BC43  [11]  Bluetooth
+"1127604510"    //  0x4335E11E  [12]  Hlavni obrazovka
+"1127598135"    //  0x4335C837  [13]  listovani v polozkach [+]
+"1127608335"    //  0x4335F00F  [14]  listovani v polozkach [-]
+"1127594055"    //  0x4335B847  [15]  Informace o Mesici
+"1127605275"    //  0x4335E41B  [16]  Informace o Slunci
+"1127580795"    //  0x4335847B  [17]  Kalendar
+"1127597115"    //  0x4335C43B  [18]  Rekordy
+"1127604255"    //  0x4335E01F  [19]  Velke hodiny
+"1127589975"    //  0x4335A857  [20]  Pristi budik
+"1127596095"    //  0x4335C03F  [21]  Soumraky
