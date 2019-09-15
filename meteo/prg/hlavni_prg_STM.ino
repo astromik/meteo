@@ -5,8 +5,8 @@
 //==============================================================================
 //
 //
-// Detaily: http://www.astromik.org/raspi/meteostanice/
-// verze STM + displej TJC4832 - (1.9.2019)
+// Detaily: http://www.astromik.org/raspi/meteo2/
+// verze STM + displej TJC4832 - (15.9.2019)
 //
 //
 // (Pri prvnim spusteni programu musi byt zasunuta karta s datovymi soubory pro EEPROM)
@@ -2080,8 +2080,20 @@ void test_pohybu(void)
           {
             budik_blok = true;
             budik_bezi = false;
-            zpozdeni_podsvetu = 1;                      // a displej se pohybem zhasne (v pristi smycce)
-            podsvet(false);
+
+
+            if (akt_LOC_hodmin == budik_off)           // drive se pri pokusu o rozsviceni displeje pohybem v case "budik_off" displej nerozsvecoval
+              {
+                displej_page0();                       // touto podminkou by se to melo opravit
+                podsvet(true);
+                zpozdeni_podsvetu = KON_ZPOZD_PODSV;                
+              }
+            else                                       // kdyz je budik aktivni (ale uz nepiska),
+              {
+                zpozdeni_podsvetu = 1;                 // displej se pohybem zhasne (v pristi smycce)
+                podsvet(false);
+              }
+
           }
 
         
@@ -2963,7 +2975,7 @@ void posli_CSV_blok(void)
     Serial.print(na_binar(status_byte));
     print_strednik();                         // oddelovac ';'
 
-    Serial.print(index_iko);                  // index aktualni ikony Mesice  (1=nov ... 9=uplnek ... 16= skoro nov)
+    Serial.print(index_iko);                  // index aktualni ikony Mesice
     print_strednik();                         // oddelovac ';'
     Serial.println(stari_mesice);             // stari Mesice v minutach od posledniho novu
     //  Serial.print(stari_mesice_D);             // jako varianta se da odesilat stari Mesice ve dnech a desetinach dne od posledniho novu (napr "12.65")
